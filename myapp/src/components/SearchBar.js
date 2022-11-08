@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ onSubmit }) => {
   const [term, setTerm] = useState("");
 
   //inputをフォーカスした状態でEnterを押した時のリロードを無効化
   const onFormSubmit = (event) => {
     event.preventDefault();
+    onSubmit(term);
   };
 
   return (
