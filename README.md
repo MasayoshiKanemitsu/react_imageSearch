@@ -1,3 +1,3 @@
 # 画像検索アプリ
 
-WEBAPI を使用。
+Pixabay の WEBAPI を使用。
