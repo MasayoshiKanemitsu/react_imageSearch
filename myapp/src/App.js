@@ -5,12 +5,13 @@ import ImageList from "./components/ImageList";
 
 const App = () => {
   const [images, setImages] = useState([]);
+  const ApiKey = process.env.REACT_APP_PIXABAY_APIKEY; //.env.localの変数を参照
 
   const onSearchSubmit = async (term) => {
     // console.log(term); //入力してEnterを押した時の文字を出力
     try {
       const params = {
-        key: "31180839-141fc33c2f41f224379d913bf",
+        key: ApiKey,
         q: term, //「q」は検索キーワードに入力された文字
       };
       const response = await axios.get("https://pixabay.com/api/", { params });
