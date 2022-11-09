@@ -11,7 +11,7 @@ const SearchBar = ({ onSubmit }) => {
 
   return (
     <>
-      <form onSubmit={onFormSubmit} className='ui form'>
+      <form onSubmit={onFormSubmit} className='ui form' style={{ marginBottom: "30px" }}>
         <div className='field'>
           <label htmlFor=''>Image Search for Pixabay</label>
           <input

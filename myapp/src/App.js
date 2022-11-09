@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
+import "./styles/logo.css";
+
+//画像読み込み
+import logo from "./images/logo.png";
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -29,6 +33,7 @@ const App = () => {
 
   return (
     <div className='ui container' style={{ marginTop: "20px" }}>
+      <img src={logo} alt='Logo' className='c-logo' />
       <SearchBar onSubmit={onSearchSubmit} />
       <ImageList images={images} />
     </div>
